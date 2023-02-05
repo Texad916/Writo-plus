@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="texdalogo_bright.jpg">
+    <title>GEllpen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <script src="https://kit.fontawesome.com/c9a9714f2f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif Toto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick Hand">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share Tech">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open sans">
+    <!-- Demo styles -->
+    <style>
+        body {
+            scroll-behavior: smooth;
+            overflow: scroll;
+        }
+
+        body {
+            font-family: "Patrick Hand";
+            font-size: x-large;
+        }
+
+        body .textarea {
+            font-family: "share tech", monospace;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        body footer {
+            font-weight: 200;
+            font-size: 1.1rem;
+            font-family: "open sans", verdana;
+        }
+        #link_i {
+            background-image: linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        #link_f {
+            background-image: linear-gradient(blue, blue);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        #link_t {
+            background-image: linear-gradient(#1DA1F2, #1DA1F2);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .handels_social {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+         li {
+            list-style: none;
+        }
+        :root {
+            --secondary-color: #fefefe;
+            --primary-color: #fefefe85;
+            --slide-image: linear-gradient(45deg, blue, red, purple);
+            --primary-text-color: #0807078c;
+            --primary-font-color: black;
+            --secondary-font-color: black;
+            --nav-color: #ffee00e0;
+            --slide-bg: #eeeeeeef;
+        }
+
+        .dark {
+            --secondary-color: #0e0e0e;
+            --primary-color: #d35a09;
+            --slide-image: linear-gradient(45deg, blue, red, purple);
+            --primary-text-color: rgba(255, 238, 255, 0.788);
+            --primary-font-color: rgba(255, 255, 255, 0.87);
+            --secondary-font-color: #ebe9e9;
+            --nav-color: #056334;
+            --slide-bg: #056334;
+
+        }
+
+        html,
+        body {
+            position: relative;
+        }
+
+        #moon {
+            width: 30%;
+            border-radius: 30%;
+        }
+
+        body {
+            background: var(--secondary-color);
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 5px;
+        }
+
+        body div {
+            padding: 3px;
+            margin: 5px;
+        }
+
+        .navbar .logo img {
+            width: 2.5em;
+            aspect-ratio: 1;
+            border-radius: 10px;
+
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            border-radius: 20px;
+            background: var(--slide-bg);
+
+            /* Center slide text vertically */
+            /* display: -webkit-box; */
+            /* display: -ms-flexbox; */
+            /* display: -webkit-flex; */
+            /* display: flex; */
+            /* -webkit-box-pack: center; */
+            /* -ms-flex-pack: center; */
+            /* -webkit-justify-content: center; */
+            /* justify-content: center; */
+            /* -webkit-box-align: center; */
+            /* -ms-flex-align: center; */
+            /* -webkit-align-items: center; */
+            /* align-items: center; */
+        }
+
+        .swiper-slide {
+            width: 70%;
+        }
+
+        .swiper-slide ul li {
+            list-style: none;
+            color: var(--secondary-font-color);
+        }
+
+        .swiper-slide ul h4 {
+            color: rgb(0, 0, 0);
+            padding: 12px;
+            margin: 5px;
+            text-decoration: underline;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .swiper-slide img {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 300px;
+            aspect-ratio: 50%;
+            border-radius: 5px;
+            background-image: var(--slide-image);
+            object-fit: contain;
+        }
+
+        ::-webkit-scrollbar {
+            background-color: #968eff50;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            width: 20px;
+            height: 180px;
+            border-radius: 8px;
+            background-color: #d35a09;
+        }
+
+        body {
+            font-family: "Patrick Hand";
+            font-size: x-large;
+        }
+
+        a {
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            text-shadow: 1.1px 2.4px 0.2px black;
+            text-decoration: wavy black 3px;
+            text-decoration: none;
+            margin: 2rem;
+            font-family: "Noto Serif Toto";
+        }
+
+        #moon img {
+            margin: 4rem;
+        }
+
+        a:hover {
+            background-color: orangered;
+            transition: 0.6 ease-out;
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            background-color: var(--nav-color);
+        }
+
+        .row {
+            width: 80%;
+            margin: auto;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            height: 2em;
+            align-items: center;
+        }
+
+        .navbar .main-menu {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .main-menu li a {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+
+        .menu-btn {
+            display: none;
+        }
+
+        ul li #moon {
+            width: 30px;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .main-menu {
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                background-color: #252525;
+                transition: 0.5s all ease;
+                /* visibility: hidden; */
+                display: none;
+                align-items: center;
+                transform: translateX(-800px);
+                padding-top: 60px;
+            }
+
+            .main-menu.show {
+                transform: translateX(0px);
+                transition: 0.5s all ease;
+            }
+
+            .main-menu li a {
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            .menu-btn {
+                display: inline-block;
+                position: absolute;
+                color: white;
+                top: 10px;
+                right: 30px;
+                font-size: 3rem;
+            }
+        }
+
+
+        .textarea {
+            color: var(--primary-font-color);
+        }
+
+        footer {
+            display: flex;
+            background-image: linear-gradient(#10172a, #04042e);
+            color: azure;
+            border-radius: 5px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 1em;
+        }
+
+        footer ul li {
+            padding: 0.5rem;
+        }
+
+        footer ul h4 {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .moon_2nd {
+            width: 30%;
+            box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
+        }
+
+        article {
+            font-size: 1.2rem;
+            color: var(--primary-font-color);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 1.5rem;
+        }
+
+        first_Handels_1 {
+            list-style: none;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(rgb(255, 124, 146), orangered, purple, red);
+            color: transparent;
+        }
+
+        first_Handels_2 {
+            list-style: none;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-color: blue;
+            color: transparent;
+        }
+
+        first_Handels_3 {
+            list-style: none;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-color: #00bfff;
+            color: transparent;
+        }
+
+        ul pre {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .texda_logo {
+            width: 200px;
+            border-radius: 50%;
+            position: bottom right;
+        }
+
+        .texda_logo:hover {
+            transform: scale(130%);
+            filter: saturate(2.00);
+            transition: ease-in-out 0.6s;
+        }
+
+        @media (max-width:800px) {
+            .navbar .logo img {
+                width: 70px;
+            }
+
+            .swiper-slide {
+                min-width: 224px;
+                text-align: center;
+            }
+
+            .penlist {
+                display: flex;
+                border-radius: 20px;
+                flex-wrap: wrap;
+            }
+
+            .swiper-slide img {
+                max-width: 500px;
+                min-height: 300px;
+                object-fit: contain;
+                transform: rotate(360deg);
+            }
+        }
+
+        .swiper-slide:nth-child(all) {
+            width: 60%;
+            height: 40%;
+        }
+
+        .swiper-slide:nth-child(4n) {
+            height: 40%;
+            width: 40%;
+        }
+
+        .swiper-slide:nth-child(5n) {
+            height: 40%;
+            width: 40%;
+        }
+
+        .swiper-slide:nth-child(6n) {
+            height: 70%;
+            width: 60%;
+        }
+
+        .swiper-slide:nth-child(7n) {
+            height: 70%;
+            width: 60%;
+        }
+
+        .swiper-slide:nth-child(8n) {
+            height: 70%;
+            width: 60%;
+        }
+
+        .swiper-slide:nth-child(9n) {
+            height: 70%;
+            width: 60%;
+        }
+
+        .swiper-slide:nth-child(3n) {
+            height: 40%;
+            width: 40%;
+        }
+
+        @media (max-width:800px) {
+            .swiper-slide:nth-child(all) {
+                width: 60%;
+                height: 40%;
+            }
+
+            .swiper-slide:nth-child(4n) {
+                height: 40%;
+                width: 40%;
+            }
+
+            .swiper-slide:nth-child(5n) {
+                height: 40%;
+                width: 40%;
+            }
+
+            .swiper-slide:nth-child(6n) {
+                height: 70%;
+                width: 50%;
+            }
+
+            .swiper-slide:nth-child(7n) {
+                height: 50%;
+                width: 40%;
+            }
+
+            .swiper-slide:nth-child(8n) {
+                height: 40%;
+                width: 40%;
+            }
+
+            .swiper-slide:nth-child(9n) {
+                height: 40%;
+                width: 40%;
+            }
+
+            .swiper-slide:nth-child(3n) {
+                height: 40%;
+                width: 40%;
+            }
+
+            footer {
+                display: grid;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+
+            footer ul {
+                font-size: 15px;
+                margin: auto;
+            }
+        }
+
+        .penlist {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: var(--nav-color);
+        }
+
+        .penlist li {
+            text-decoration: none;
+            color: #efefef;
+            text-shadow: 1px 2px 1px black;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        #li_premium {
+            color: white;
+            text-decoration: underline #056334 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="menu-btn">
+                <pre
+                    style="font-size:15px; color:whitesmoke; text-decoration: underline solid 3px #1a54c0;">click me</pre>
+            </div>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="1.png">
+                </div>
+                <ul class="main-menu">
+                    <li class="list-items"><a href="">About</a></li>
+                    <li class="list-items"><a href="">Services</a></li>
+                    <li class="list-items"><a href="">Contact</a></li>
+                    <li class="list-items"><a href="">Blog</a></li>
+                    <li><img id="moon" src="half-moon.svg">
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="textarea">
+        <h2>Writo plus is an pen reccomendation Web design and Develop by Texad's Creative team.Is User frindly we are
+            trying to make it Better day-by-day.We will recently gonna improve it recently. </h2>
+        <h3>OUR PRODUCTS reccomendation</h3>
+    </div>
+    <article>
+        <p>There's also many more Pens there but these are our favourite an these all are just otr
+            recommendation
+            &#128526;</p>
+        <p>We added pens which are affordable for student and we personally use them and all are easy to found in
+            market.</p>
+        <p style=" list-style:none; background-color: #EEE; color:Red; border-radius: 20px; text-align: center;">IF you
+            find any mistake
+            in this WEB.Pls! know us on our social media handle
+            <li id="Handel "><i id="link_i" class="fa-brands fa-instagram fa-2x"></i></li>
+            <li id="Handel "><i id="link_f" class="fa-brands fa-facebook fa-2x"></i></li>
+            <li id="Handel "><i id="link_t" class="fa-brands fa-twitter fa-2x"></i></li>
+             </p>
+        <h4 className=" text3xrs font-bold">not a paid promotion</h4>
+        <h5>As you can see our personal favourites are in diffrent themes </h5>
+    </article>
+    <div class="penlist">
+        <ul>
+            <li><a>ballpen</a></li>
+        </ul>
+        <ul>
+            <li><a>GellPen</a></li>
+        </ul>
+        <ul>
+            <li><a>Direct-fille-Pen</a></li>
+        </ul>
+        <ul>
+            <li><i id="li_premium" style="color:rgb(255, 255, 255); text-shadow:1px 2px 1pxwhite;">(Premium)</i>Pen</li>
+        </ul>
+    </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="Elkos first.png" alt="">
+                <ul>
+                    <h4>Elkos Firstball</h4>
+                    <li>Such a nice for writing In languages</li>
+                    <li>But sometimes makes problem with sweat hands</li>
+                </ul>
+            </div>
+            <div class="swiper-slide"><img src="https://www.elkospens.com/images/products/ballpen_b/vista/1.jpg" alt="">
+                <ul>
+                    <h4>
+                        Elkos Vista
+                    </h4>
+                    <li>Many of you can say is Copy of Goldex </li>
+                    <li>
+                        and Yeh!it has no competition with Goldex
+                    </li>
+                    <li>But it's grip felt better than goldex in hand</li>
+                </ul>
+            </div>
+            <div class="swiper-slide"><img
+                    src="https://www.cellowriting.com/public/uploads/items/gallery/Butterflow_59dde3cacc8d5.png" alt="">
+                <ul>
+                    <h4>Cello Butterflow</h4>
+                    <li>Yeh!no Need to Introduction</li>
+                </ul>
+            </div>
+            <div class="swiper-slide"><img
+                    src="https://www.cellowriting.com/public/uploads/items/gallery/Butterflow%20simply_5a11c4498e9a3.png"
+                    alt="">
+                <ul>
+                    <h4>Cello Butterflow_SImply</h4>
+                    <li>Yet!still prefer old one</li>
+                </ul>
+            </div>
+            <div class="swiper-slide"><img
+                    src="https://www.cellowriting.com/public/uploads/items/gallery/Finegrip_5a11c501eb0c9.png" alt="">
+                <ul>
+                    <h4>Cello finegrip</h4>
+                    <li>as according to name has a smooth grip</li>
+                </ul>
+            </div>
+            <div class="swiper-slide"><img src="Classoctane.png" alt="">
+                <ul>
+                    <h4>Classmate octane</h4>
+                    <li>Looks great right</li>
+                    <li>Fine rubberrized and fiber material.</li>
+                </ul>
+            </div>
+            <div class="swiper-slide"><img src="https://hauserpen.in/images/ball-pens/xo.webp" alt="">
+                <h4>XO</h4>
+                <ul>
+                    <li>One of our personal hauser pen</li>
+                    <li>feel such light weigh in hands and also feels good writing</li>
+                </ul>
+            </div>
+
+            <div class="swiper-slide"><img
+                    src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSJpczKXUrWA9JvnAXIeUhEq64AadOGGa0NuXtZJ4pWGzUVym0N7lm5hxZdCUS3avBTXsQD7EvwkCGIH3W13KhFNcTYwl_363a5qZaJp2uCtodC8YtEgH46"
+                    alt="">
+                <ul>
+                    <h4>REYnolds 045</h4>
+                    <li>It's Fine Pen Many off us may know how confertable it is </li>
+                </ul>
+            </div>
+            <div class="swiper-slide"><img src="lovino.png" id="lovino" alt="">
+                <ul>
+                    <h4>Elkos lovino</h4>
+                    <li>Such a light weight</li>
+                    <li>we have such a Great writing exp.</li>
+                </ul>
+            </div>
+
+            <!-- <div class="swiper-slide"></div>
+                        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div> -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+    <footer>
+        <ul>
+            <h4>Facilities</h4>
+            <li>AN pen reccomendation web</li>
+            <li>Based on our likes<h1>&#128578;</h1>
+            </li>
+            <li>we also given the Ratings to pen </li>
+
+        </ul>
+        <ul>
+            <h4>Get help</h4>
+            <li>Know us How can we </li>
+            <li>Help you!&#128583;</li>
+            <li>Know us By Mail or Instragram to NEWGEN9513</li>
+        </ul>
+        <ul>
+            <h4>Online shop</h4>
+            <li>Newgen Essay Centre</li>
+            <li>Should WE add Mechanical pens to this web </li>
+            <li>About US </li>
+        </ul>
+        <ul>
+            <h4>contact US</h4>
+            <li id="contact_links"><a href=""><i id="links_i" class="fa-brands fa-instagram fa-2x"></i></a></li>
+            <li id="contact_links"><a href=""><i id="links_i" class="fa-brands fa-facebook fa-2x"></i></a></li>
+            <li id="contact_links"><a href=""><i id="links_i" class="fa-brands fa-twitter fa-2x"></i></a></li>
+        </ul>
+        <ul>
+            <li>
+                click the pic of moon from Click me button to enable dark theme
+            </li>
+            <pre>
+           <img src="texad_bgless.png" class="texda_logo">
+    </pre>
+        </ul>
+    </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 200,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        var moon = document.getElementById("moon");
+        moon.onclick = function () {
+            document.body.classList.toggle("dark");
+            if (document.body.classList.contains("dark")) {
+                moon.src = "sun-light.svg"
+            }
+            if (document.body.classList.contains(":root")) {
+                sun.jpg = sun.src
+            }
+        }
+        document.querySelector(".menu-btn").addEventListener("click", abc);
+        function abc() {
+            document.querySelector(".main-menu").classList.toggle("show");
+        }
+
+    </script>
+</body>
+
+</html>

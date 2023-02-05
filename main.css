@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#logo {
+    width: 7rem;
+    margin: 0px;
+    padding: 0;
+    border-radius: 500%;
+    transform: rotate(-15deg);
+}
+
+body {
+    border-color:black;
+}
+
+
+.textarea {
+    text-align: center;
+    background-image:linear-gradient(360deg,#cbbfff,azure) ;
+    color: #080707;
+    margin: 12px 0 12px 0;
+    border-radius: 4px;
+    box-shadow: 1em 2em 3em azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.textarea h3 {
+    text-decoration: underline;
+}
+
+.list_pens {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to top, #d1f6ff, azure);
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 5px;
+    box-shadow: 1em 12em 13em #10172a;
+    justify-content: space-evenly
+}
+
+#Corrent {
+    background-color: azurex    ;
+    padding: 5px;
+    border-radius: 60px;
+    box-shadow: 1rem 1rem 3rem black;
+}
+
+.list_pens ul {
+    list-style: none;
+}
+
+.list_pens ul li a {
+    color: #080707;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.list_pens ul li #premium {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: monospace;
+    color: goldenrod;
+}
+
+.list_Ballpen {
+    position: relative;
+    margin: 20px;
+}
+
+.list_Ballpen div {
+    position: absolute;
+    display: flex;
+    gap: 2pc;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.list_Ballpen div ul {
+    list-style: none;
+}
+
+.list_Ballpen img {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 13px;
+    padding: 2px;
+    margin: 2px;
+}
+
+.list_Ballpen img :hover {
+    filter: hue-rotate(20%);
+    transition: .0.4s;
+    transform: scale(1.05);
+}
+
